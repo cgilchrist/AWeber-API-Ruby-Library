@@ -1,0 +1,832 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta name="Content-Type" content="text/html; charset=utf-8" />
+<title>Class: AWeber::Resource</title>
+<link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (R)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../AWeber.html" title="AWeber (module)">AWeber</a></span></span>
+     &raquo; 
+    <span class="title">Resource</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  <a id="class_list_link" href="#">Class List</a>
+  <a id="method_list_link" href="#">Method List</a>
+  <a id ="file_list_link" href="#">File List</a>
+</div>
+
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: AWeber::Resource
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">AWeber::Resource</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+      <dt class="r2">Extended by:</dt>
+      <dd class="r2">Forwardable</dd>
+      
+    
+  
+    
+  
+  
+  
+    <dt class="r1 last">Defined in:</dt>
+    <dd class="r1 last">lib/aweber/resource.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Overview</h2><div class="docstring">
+  <div class="discussion">
+    <p>
+Base class for all entries. All resources have the following attributes:
+</p>
+<ul>
+<li><p>
+<tt>id</tt>
+</p>
+</li>
+<li><p>
+<tt>http_etag</tt> (aliased as <tt>etag</tt>)
+</p>
+</li>
+<li><p>
+<tt>self_link</tt> (aliased as <tt>link</tt>)
+</p>
+</li>
+<li><p>
+<tt>resource_type_link</tt> (aliased as <tt>resource_type</tt>)
+</p>
+</li>
+</ul>
+<p>
+Resources also have attributes based on their the type of resource it is.
+To see a full list of attributes per resource, visit  <a
+href="http://labs.aweber.com/docs">labs.aweber.com/docs</a>/
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><div id="subclasses">
+  <h2>Direct Known Subclasses</h2>
+  <p class="children"><span class='object_link'><a href="Collection.html" title="AWeber::Collection (class)">Collection</a></span>, <span class='object_link'><a href="Resources/Account.html" title="AWeber::Resources::Account (class)">Resources::Account</a></span>, <span class='object_link'><a href="Resources/Broadcast.html" title="AWeber::Resources::Broadcast (class)">Resources::Broadcast</a></span>, <span class='object_link'><a href="Resources/Click.html" title="AWeber::Resources::Click (class)">Resources::Click</a></span>, <span class='object_link'><a href="Resources/Followup.html" title="AWeber::Resources::Followup (class)">Resources::Followup</a></span>, <span class='object_link'><a href="Resources/Link.html" title="AWeber::Resources::Link (class)">Resources::Link</a></span>, <span class='object_link'><a href="Resources/List.html" title="AWeber::Resources::List (class)">Resources::List</a></span>, <span class='object_link'><a href="Resources/Message.html" title="AWeber::Resources::Message (class)">Resources::Message</a></span>, <span class='object_link'><a href="Resources/Open.html" title="AWeber::Resources::Open (class)">Resources::Open</a></span>, <span class='object_link'><a href="Resources/Subscriber.html" title="AWeber::Resources::Subscriber (class)">Resources::Subscriber</a></span>, <span class='object_link'><a href="Resources/TrackedEvent.html" title="AWeber::Resources::TrackedEvent (class)">Resources::TrackedEvent</a></span>, <span class='object_link'><a href="Resources/VendorAccount.html" title="AWeber::Resources::VendorAccount (class)">Resources::VendorAccount</a></span></p>
+</div>
+
+
+  
+  <h2>Instance Attribute Summary <small>(<a href="#" class="summary_toggle">collapse</a>)</small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#http_etag-instance_method" title="#http_etag (instance method)">- (Object) <strong>http_etag</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Resource&#8217;s etag.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#id-instance_method" title="#id (instance method)">- (Object) <strong>id</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Resource&#8217;s id.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#resource_type_link-instance_method" title="#resource_type_link (instance method)">- (Object) <strong>resource_type_link</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Link to a description of the resource.
+</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#self_link-instance_method" title="#self_link (instance method)">- (Object) <strong>self_link</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title readonly">readonly</span>
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Link to where the resource can be located.
+</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#alias_attribute-class_method" title="alias_attribute (class method)">+ (Object) <strong>alias_attribute</strong>(alias_, attribute) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Works the same as <tt>alias_method</tt>, but for attributes created via
+<tt>attr*</tt> methods.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#has_many-class_method" title="has_many (class method)">+ (AWeber::Collection) <strong>has_many</strong>(name) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+Creates a lazy loaded method which will retrieve and create a  collection
+of <tt>name</tt> of objects.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#%3C%3D%3E-instance_method" title="#&lt;=&gt; (instance method)">- (Object) <strong>&lt;=&gt;</strong>(other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (Resource) <strong>initialize</strong>(data = {}) </a>
+    
+
+    
+  </span>
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+A new instance of Resource.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#inspect-instance_method" title="#inspect (instance method)">- (Object) <strong>inspect</strong>(opt = {}) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <p class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="AWeber::Resource (class)">Resource</a></span></tt>) <strong>initialize</strong>(data = {}) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+A new instance of Resource
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+68
+69
+70
+71
+72</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aweber/resource.rb', line 68</span>
+
+<span class='kw'>def</span> <span class='id initialize'>initialize</span><span class='lparen'>(</span><span class='id data'>data</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id data'>data</span><span class='period'>.</span><span class='id each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id key'>key</span><span class='comma'>,</span> <span class='id value'>value</span><span class='op'>|</span>
+    <span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id key'>key</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id value'>value</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id respond_to?'>respond_to?</span> <span class='id key'>key</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <span id="http_etag-instance_method"></span>
+      <div class="method_details first">
+  <p class="signature first" id="http_etag-instance_method">
+  
+    - (<tt>Object</tt>) <strong>http_etag</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Resource&#8217;s etag
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aweber/resource.rb', line 58</span>
+
+<span class='kw'>def</span> <span class='id http_etag'>http_etag</span>
+  <span class='ivar'>@http_etag</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="id-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="id-instance_method">
+  
+    - (<tt>Object</tt>) <strong>id</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Resource&#8217;s id
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+56
+57
+58</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aweber/resource.rb', line 56</span>
+
+<span class='kw'>def</span> <span class='id id'>id</span>
+  <span class='ivar'>@id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="resource_type_link-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="resource_type_link-instance_method">
+  
+    - (<tt>Object</tt>) <strong>resource_type_link</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Link to a description of the resource
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aweber/resource.rb', line 62</span>
+
+<span class='kw'>def</span> <span class='id resource_type_link'>resource_type_link</span>
+  <span class='ivar'>@resource_type_link</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <span id="self_link-instance_method"></span>
+      <div class="method_details ">
+  <p class="signature " id="self_link-instance_method">
+  
+    - (<tt>Object</tt>) <strong>self_link</strong>  <span class="extras">(readonly)</span>
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Link to where the resource can be located
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61
+62</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aweber/resource.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id self_link'>self_link</span>
+  <span class='ivar'>@self_link</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="alias_attribute-class_method">
+  
+    + (<tt>Object</tt>) <strong>alias_attribute</strong>(alias_, attribute) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Works the same as <tt>alias_method</tt>, but for attributes created via
+<tt>attr*</tt> methods.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aweber/resource.rb', line 23</span>
+
+<span class='kw'>def</span> <span class='id alias_attribute'>alias_attribute</span><span class='lparen'>(</span><span class='id alias_'>alias_</span><span class='comma'>,</span> <span class='id attribute'>attribute</span><span class='rparen'>)</span>
+  <span class='id alias_method'>alias_method</span> <span class='id alias_'>alias_</span><span class='comma'>,</span> <span class='id attribute'>attribute</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="has_many-class_method">
+  
+    + (<tt><span class='object_link'><a href="Collection.html" title="AWeber::Collection (class)">AWeber::Collection</a></span></tt>) <strong>has_many</strong>(name) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+Creates a lazy loaded method which will retrieve and create a  collection
+of <tt>name</tt> of objects.
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+  <div class="examples">
+    <h3>Examples:</h3>
+    
+      <h4><div class='inline'></div></h4>
+      <pre class="example code"><span class='kw'>class</span> <span class='const'>Account</span>
+  <span class='id attr_reader'>attr_reader</span> <span class='symbol'>:lists_collection_link</span>
+  <span class='id collection'>collection</span>  <span class='symbol'>:lists</span>
+<span class='kw'>end</span>
+
+<span class='comment'>#=&gt; Account.new(...).lists #=&gt; &lt;AWeber::Collection&gt;</span></pre>
+    
+  </div>
+<h3>Parameters:</h3>
+<ul class="param">
+  
+    <li>
+      
+        <span class='type'>(<tt>Symbol</tt>)</span>
+      
+      
+        <span class='name'>name</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+name of the collection method
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+<h3>Returns:</h3>
+<ul class="return">
+  
+    <li>
+      
+        <span class='type'>(<tt><span class='object_link'><a href="Collection.html" title="AWeber::Collection (class)">AWeber::Collection</a></span></tt>)</span>
+      
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>
+Collection of <tt>name</tt> objects
+</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aweber/resource.rb', line 41</span>
+
+<span class='kw'>def</span> <span class='id has_many'>has_many</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span>
+  <span class='id define_method'>define_method</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id resource_link'>resource_link</span> <span class='op'>=</span> <span class='id instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_content'>_collection_link</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id instance_var'>instance_var</span>  <span class='op'>=</span> <span class='id instance_variable_get'>instance_variable_get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id klass'>klass</span>         <span class='op'>=</span> <span class='const'>AWeber</span><span class='period'>.</span><span class='id get_class'>get_class</span><span class='lparen'>(</span><span class='id name'>name</span><span class='rparen'>)</span>
+    
+    <span class='kw'>return</span> <span class='id instance_var'>instance_var</span> <span class='kw'>if</span> <span class='id instance_var'>instance_var</span>
+      
+    <span class='id collection'>collection</span> <span class='op'>=</span> <span class='const'>Collection</span><span class='period'>.</span><span class='id new'>new</span><span class='lparen'>(</span><span class='id klass'>klass</span><span class='comma'>,</span> <span class='id get_resource'>get_resource</span><span class='lparen'>(</span><span class='id resource_link'>resource_link</span><span class='rparen'>)</span><span class='rparen'>)</span>
+    <span class='id instance_variable_set'>instance_variable_set</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>@</span><span class='embexpr_beg'>#{</span><span class='id name'>name</span><span class='rbrace'>}</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id collection'>collection</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="<=>-instance_method">
+  
+    - (<tt>Object</tt>) <strong>&lt;=&gt;</strong>(other) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75
+76</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aweber/resource.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='op'>&lt;=&gt;</span><span class='lparen'>(</span><span class='id other'>other</span><span class='rparen'>)</span>
+  <span class='ivar'>@id</span> <span class='op'>&lt;=&gt;</span> <span class='id other'>other</span><span class='period'>.</span><span class='id id'>id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="inspect-instance_method">
+  
+    - (<tt>Object</tt>) <strong>inspect</strong>(opt = {}) 
+  
+
+  
+</p><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80
+81</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/aweber/resource.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id inspect'>inspect</span><span class='lparen'>(</span><span class='id opt'>opt</span><span class='op'>=</span><span class='lbrace'>{</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id attrs'>attrs</span> <span class='op'>=</span> <span class='id opt'>opt</span><span class='period'>.</span><span class='id map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id k'>k</span><span class='comma'>,</span> <span class='id v'>v</span><span class='op'>|</span> <span class='tstring'><span class='tstring_beg'>%Q|</span><span class='embexpr_beg'>#{</span><span class='id k'>k</span><span class='rbrace'>}</span><span class='tstring_content'>=&quot;</span><span class='embexpr_beg'>#{</span><span class='id v'>v</span><span class='rbrace'>}</span><span class='tstring_content'>&quot;</span><span class='tstring_end'>|</span></span> <span class='rbrace'>}</span><span class='period'>.</span><span class='id join'>join</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>, </span><span class='tstring_end'>&quot;</span></span>
+  <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>#&lt;</span><span class='embexpr_beg'>#{</span><span class='kw'>self</span><span class='period'>.</span><span class='id class'>class</span><span class='period'>.</span><span class='id to_s'>to_s</span><span class='rbrace'>}</span><span class='tstring_content'> </span><span class='embexpr_beg'>#{</span><span class='id attrs'>attrs</span><span class='rbrace'>}</span><span class='tstring_content'> /&gt;</span><span class='tstring_end'>&quot;</span></span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Wed Sep 22 18:00:35 2010 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.6.1 (ruby-1.9.1).
+</div>
+
+  </body>
+</html>

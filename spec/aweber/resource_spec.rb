@@ -1,0 +1,56 @@
+require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+
+class FakeResource < AWeber::Resource
+  attr_accessor :foo
+  alias_attribute :bar, :foo
+  has_many :lists
+end
+
+describe AWeber::Resource do
+    
+  it "should alias attributes" do
+    fake = FakeResource.new
+    fake.foo = "abc"
+    fake.bar.should == "abc"
+  end
+  
+  it "should create collections" do
+    AWeber.api.stub(:expand) { "https://api.aweber.com/1.0/accounts/1/lists" }
+    fake = FakeResource.new
+    fake.lists.should be_an AWeber::Collection
+  end
+  
+  it "should have the standard resource attribtues" do
+    fake = FakeResource.new
+    fake.should respond_to :id
+    fake.should respond_to :http_etag
+    fake.should respond_to :self_link
+    fake.should respond_to :resource_type_link
+  end
+  
+  it "should be creatable from data" do
+    fake = FakeResource.new :id => 1, :http_etag => "a1b2c3", 
+      :self_link => "foo", :resource_type_link => "bar"
+    fake.id.should == 1
+    fake.http_etag.should == "a1b2c3"
+    fake.self_link.should == "foo"
+    fake.resource_type_link.should == "bar"
+  end
+  
+  it "should have simpler aliases for the standard attributes" do
+    fake = FakeResource.new :id => 1, :http_etag => "a1b2c3",
+      :self_link => "foo", :resource_type_link => "bar"
+    fake.etag.should == "a1b2c3"
+    fake.link.should == "foo"
+    fake.resource_type.should == "bar"
+  end
+  
+  it "should be comparable to other resources based on id" do
+    fake1 = FakeResource.new :id => 1
+    fake2 = FakeResource.new :id => 1
+    fake3 = FakeResource.new :id => 2
+    fake1.should == fake2
+    fake1.should_not == fake3
+  end
+  
+end
