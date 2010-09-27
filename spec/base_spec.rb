@@ -1,7 +1,6 @@
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe AWeber::Base do
-  
   before :each do
     @oauth  = AWeber::OAuth.new("token", "secret")
     @aweber = AWeber::Base.new(@oauth)
@@ -25,5 +24,4 @@ describe AWeber::Base do
     base = AWeber::Base.new(@oauth)
     base.send(:get, "/foo")
   end
-
 end

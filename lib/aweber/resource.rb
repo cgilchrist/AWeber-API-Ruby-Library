@@ -1,5 +1,4 @@
 module AWeber
-  
   # Base class for all entries. All resources have the following attributes:
   #
   # - +id+

@@ -5,9 +5,6 @@ module AWeber
       @oauth = oauth
     end
     
-    # The first account (typically the only one) associated 
-    # with the Access Token.
-    #
     def account
       accounts.first.last
     end
