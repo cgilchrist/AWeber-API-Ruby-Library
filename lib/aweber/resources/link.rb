@@ -5,7 +5,7 @@ module AWeber
       attr_reader :total_unique_clicks
       attr_reader :url
       attr_reader :clicks_collection_link
-    
+      
       has_many :clicks
     end
   end

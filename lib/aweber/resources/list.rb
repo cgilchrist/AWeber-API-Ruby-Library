@@ -1,15 +1,18 @@
 module AWeber
   module Resources
     class List < Resource
-      
       FOLLOWUP_TYPE_LINK  = File.join(AWeber.api_url, "#followup_campaign")
       BROADCAST_TYPE_LINK = File.join(AWeber.api_url, "#broadcast_campaign")
       
       attr_reader :campaigns_collection_link
       attr_reader :subscribers_collection_link
+      attr_reader :web_forms_collection_link
+      attr_reader :web_form_split_tests_collection_link
       attr_reader :name
-    
+      
       has_many :subscribers
+      has_many :web_forms
+      has_many :web_form_split_tests
       
       def initialize(*args)
         super(*args)
@@ -35,7 +38,7 @@ module AWeber
         campaigns if @followups.nil?
         @followups
       end
-    
+      
     private
       
       def create_followups
@@ -70,7 +73,7 @@ module AWeber
       end
       
       def _campaigns
-        @_campaigns ||= get @campaigns_collection_link
+        @_campaigns ||= get(@campaigns_collection_link)
       end
       
       def _entries

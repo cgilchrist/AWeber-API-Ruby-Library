@@ -12,17 +12,19 @@ module AWeber
   # of relying on the assumption that collections
   # are simply class names without the "s", we
   # explicitely set up a mapping from name to class.
+  #
   INFLECTIONS = { 
     :accounts        => :Account,
-    :broadcasts      => :Broadcast,
     :clicks          => :Click,
-    :followups       => :Followup,
     :links           => :Link,
     :lists           => :List,
     :messages        => :Message,
     :subscribers     => :Subscriber,
     :tracked_events  => :TrackedEvent,
-    :vendor_accounts => :VendorAccount
+    :vendor_accounts => :VendorAccount,
+    :web_forms       => :WebForm,
+    :web_form_split_tests => :WebFormSplitTest,
+    :web_form_split_test_components => :WebFormSplitTestComponent
   }
   
   class << self
@@ -58,4 +60,5 @@ $:.unshift File.expand_path(File.dirname(__FILE__))
 require "aweber/oauth"
 require "aweber/base"
 require "aweber/resource"
+require "aweber/resources"
 require "aweber/collection"

@@ -1,25 +1,25 @@
 module AWeber
   class Base
-    
+
     def initialize(oauth)
       @oauth = oauth
     end
-    
+
     def account
       accounts.first.last
     end
-    
+
   private
-    
+
     def get(uri)
       response = oauth.get(expand(uri))
       parse(response) if response
     end
-    
+
     def accounts
       @accounts ||= Collection.new(self, Resources::Account, get("/accounts"))
     end
-    
+
     def expand(uri)
       parsed = URI.parse(uri)
       url = []
@@ -28,11 +28,11 @@ module AWeber
       url << uri
       File.join(*url)
     end
-  
+
     def parse(response)
       JSON.parse(response.body)
     end
-    
+
     def oauth
       @oauth
     end

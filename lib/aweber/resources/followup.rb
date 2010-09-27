@@ -14,14 +14,12 @@ module AWeber
       attr_reader :total_sent
       attr_reader :total_undeliverable
       attr_reader :total_unsubscribed
-    
+      
       attr_reader :links_collection_link
       attr_reader :messages_collection_link
-    
+      
       has_many :links
       has_many :messages
-    
-      alias_attribute :is_send_windows_enabled?, :send_windows_enabled
     end
   end
 end

@@ -15,7 +15,7 @@ module AWeber
       attr_reader :subscribed_at
       attr_reader :unsubscribed_at
       attr_reader :verified_at
-    
+      
       alias_attribute :is_verified?, :is_verified
       alias_attribute :notes, :misc_notes
     end

@@ -79,15 +79,3 @@ module AWeber
     
   end
 end
-
-require "aweber/resources/account"
-require "aweber/resources/broadcast"
-require "aweber/resources/click"
-require "aweber/resources/followup"
-require "aweber/resources/link"
-require "aweber/resources/list"
-require "aweber/resources/message"
-require "aweber/resources/open"
-require "aweber/resources/subscriber"
-require "aweber/resources/tracked_event"
-require "aweber/resources/vendor_account"

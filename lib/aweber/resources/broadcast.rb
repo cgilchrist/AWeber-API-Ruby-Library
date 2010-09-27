@@ -15,13 +15,13 @@ module AWeber
       attr_reader :total_undeliverable
       attr_reader :total_unsubscribed
       attr_reader :twitter_account_link
-      
+    
       attr_reader :links_collection_link
       attr_reader :messages_collection_link
-      
+    
       has_many :links
       has_many :messages
-      
+    
       alias_attribute :is_click_tracked?, :click_tracking_enabled
       alias_attribute :sent_at, :sent_date
     end
