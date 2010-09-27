@@ -15,7 +15,7 @@ module AWeber
     extend Forwardable
     include Comparable
     
-    def_delegators :"AWeber.api", :get_resource
+    def_delegators :client, :get
     
     class << self
       # Works the same as +alias_method+, but for attributes created via
@@ -46,7 +46,7 @@ module AWeber
           
           resource_link = instance_variable_get("@#{name}_collection_link")
           klass         = AWeber.get_class(name)
-          collection    = Collection.new(klass, get_resource(resource_link))
+          collection    = Collection.new(client, klass, get(resource_link))
           instance_variable_set("@#{name}", collection)
         end
       end
@@ -61,7 +61,8 @@ module AWeber
     alias_attribute :link, :self_link
     alias_attribute :resource_type, :resource_type_link
     
-    def initialize(data={})
+    def initialize(client, data={})
+      @client = client
       data.each do |key, value|
         instance_variable_set("@#{key}", value) if respond_to? key
       end
@@ -70,6 +71,13 @@ module AWeber
     def <=>(other)
       @id <=> other.id
     end
+    
+  private
+    
+    def client
+      @client
+    end
+    
   end
 end
 

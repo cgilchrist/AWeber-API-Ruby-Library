@@ -3,9 +3,11 @@ require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 describe AWeber::Collection do
   
   before :each do
-    path   = File.dirname(__FILE__) + "/../fixtures/lists_page_1.json"
-    data   = JSON.parse File.read(File.expand_path(path))
-    @lists = AWeber::Collection.new(AWeber::Resources::List, data)
+    @oauth  = AWeber::OAuth.new("token", "secret")
+    @aweber = AWeber::Base.new(@oauth)
+    path    = File.dirname(__FILE__) + "/../fixtures/lists_page_1.json"
+    data    = JSON.parse File.read(File.expand_path(path))
+    @lists  = AWeber::Collection.new(@aweber, AWeber::Resources::List, data)
   end
   
   it "should create classes from the one passed into initialize" do

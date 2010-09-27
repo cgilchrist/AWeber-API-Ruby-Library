@@ -40,7 +40,7 @@ module AWeber
       
       def create_followups
         followups  = _entries.select { |entry| is_followup? entry }
-        @followups = Collection.new(Followup, {
+        @followups = Collection.new(client, Followup, {
           "entries"            => followups, 
           "total_size"         => followups.length,
           "resource_type_link" => FOLLOWUP_TYPE_LINK
@@ -49,7 +49,7 @@ module AWeber
       
       def create_broadcasts
         broadcasts  = _entries.select { |entry| is_broadcast? entry }
-        @broadcasts = Collection.new(Broadcast, {
+        @broadcasts = Collection.new(client, Broadcast, {
           "entries"            => broadcasts, 
           "total_size"         => broadcasts.length,
           "resource_type_link" => BROADCAST_TYPE_LINK

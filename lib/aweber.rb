@@ -32,9 +32,6 @@ module AWeber
     # @param [String] Base URL of the Auth server
     attr_accessor :auth_endpoint
     
-    # @param [AWeber::Base] Base AWeber API object.
-    attr_accessor :api
-    
     def api_url
       File.join api_endpoint, API_VERSION
     end
@@ -55,7 +52,6 @@ module AWeber
   
   @api_endpoint  = "https://api.aweber.com"
   @auth_endpoint = "https://auth.aweber.com"
-  @api           = false
 end
 
 $:.unshift File.expand_path(File.dirname(__FILE__))

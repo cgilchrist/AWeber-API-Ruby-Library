@@ -1,5 +1,4 @@
 module AWeber
-
   # Collection objects are groups of Resources. Collections imitate
   # regular Hashes in most ways. You can access Resource by +id+ via the
   # +[]+ method.
@@ -26,10 +25,7 @@ module AWeber
   # Collections are paginated in groups of 20. 
   #
   class Collection < Resource
-    extend  Forwardable
     include Enumerable
-    
-    def_delegators :"AWeber.api", :get_resource
     
     attr_reader :entries
     attr_reader :next_collection_link
@@ -40,11 +36,13 @@ module AWeber
     alias_method :size,   :total_size
     alias_method :length, :total_size
     
+    # @param [AWeber::Base] client instance of AWeber::Base
     # @param [Class] klass Class to create entries of
     # @param [Hash]  data  JSON decoded response data Hash
     #
-    def initialize(klass, data={})
-      super data
+    def initialize(client, klass, data={})
+      super client, data
+      @client  = client
       @klass   = klass
       @entries = {}
       create_entries(data["entries"])
@@ -62,7 +60,7 @@ module AWeber
   private
     
     def create_entries(entries)
-      entries.each { |entry| @entries[entry["id"]] = @klass.new(entry) }
+      entries.each { |entry| @entries[entry["id"]] = @klass.new(client, entry) }
     end
     
     def get_entry(n)
@@ -71,12 +69,12 @@ module AWeber
     end
     
     def fetch_entry(id)
-      @klass.new(get_resource(File.join(base_path, id.to_s)))
+      @klass.new(client, get(File.join(base_path, id.to_s)))
     end
     
     def fetch_next_group(amount=20)
       path = "#{ base_path }?ws.start=#{ @_entries.size }&ws.size=#{ amount }"
-      self.class.new(@klass, get_resource(path)).entries.to_a
+      self.class.new(client, @klass, get(path)).entries.to_a
     end
     
     def needs_next_group?(current_index)
@@ -98,6 +96,10 @@ module AWeber
         return find_by(_attr.first, *args)
       end
       super
+    end
+    
+    def client
+      @client
     end
     
   end

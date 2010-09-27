@@ -7,21 +7,26 @@ class FakeResource < AWeber::Resource
 end
 
 describe AWeber::Resource do
-    
+  
+  before :each do
+    @oauth  = AWeber::OAuth.new("token", "secret")
+    @aweber = AWeber::Base.new(@oauth)
+  end
+  
   it "should alias attributes" do
-    fake = FakeResource.new
+    fake = FakeResource.new(@aweber)
     fake.foo = "abc"
     fake.bar.should == "abc"
   end
   
   it "should create collections" do
-    AWeber.api.stub(:expand) { "https://api.aweber.com/1.0/accounts/1/lists" }
-    fake = FakeResource.new
+    @aweber.stub(:expand) { "https://api.aweber.com/1.0/accounts/1/lists" }
+    fake = FakeResource.new(@aweber)
     fake.lists.should be_an AWeber::Collection
   end
   
   it "should have the standard resource attribtues" do
-    fake = FakeResource.new
+    fake = FakeResource.new(@aweber)
     fake.should respond_to :id
     fake.should respond_to :http_etag
     fake.should respond_to :self_link
@@ -29,7 +34,7 @@ describe AWeber::Resource do
   end
   
   it "should be creatable from data" do
-    fake = FakeResource.new :id => 1, :http_etag => "a1b2c3", 
+    fake = FakeResource.new @aweber, :id => 1, :http_etag => "a1b2c3", 
       :self_link => "foo", :resource_type_link => "bar"
     fake.id.should == 1
     fake.http_etag.should == "a1b2c3"
@@ -38,7 +43,7 @@ describe AWeber::Resource do
   end
   
   it "should have simpler aliases for the standard attributes" do
-    fake = FakeResource.new :id => 1, :http_etag => "a1b2c3",
+    fake = FakeResource.new @aweber, :id => 1, :http_etag => "a1b2c3",
       :self_link => "foo", :resource_type_link => "bar"
     fake.etag.should == "a1b2c3"
     fake.link.should == "foo"
@@ -46,9 +51,9 @@ describe AWeber::Resource do
   end
   
   it "should be comparable to other resources based on id" do
-    fake1 = FakeResource.new :id => 1
-    fake2 = FakeResource.new :id => 1
-    fake3 = FakeResource.new :id => 2
+    fake1 = FakeResource.new @aweber, :id => 1
+    fake2 = FakeResource.new @aweber, :id => 1
+    fake3 = FakeResource.new @aweber, :id => 2
     fake1.should == fake2
     fake1.should_not == fake3
   end

@@ -1,30 +1,31 @@
 module AWeber
   class Base
-    extend Forwardable
     
-    def_delegators :client, :get, :post, :put, :delete
-    attr_accessor  :debug
-    attr_reader    :account
-    
-    def initialize(client)
-      @debug     = false
-      @client    = client
-      AWeber.api = self
+    def initialize(oauth)
+      @oauth = oauth
     end
     
-    def accounts
-      @accounts ||= Collection.new(Resources::Account, get_resource("/accounts"))
+    # The first account (typically the only one) associated 
+    # with the Access Token.
+    #
+    def account
+      accounts.first.last
     end
     
   private
     
-    def get_resource(uri)
-      parse get(expand(uri))
+    def get(uri)
+      response = oauth.get(expand(uri))
+      parse(response) if response
+    end
+    
+    def accounts
+      @accounts ||= Collection.new(self, Resources::Account, get("/accounts"))
     end
     
     def expand(uri)
-      url = []
       parsed = URI.parse(uri)
+      url = []
       url << AWeber.api_endpoint unless parsed.host
       url << API_VERSION unless parsed.path.include? API_VERSION
       url << uri
@@ -35,8 +36,8 @@ module AWeber
       JSON.parse(response.body)
     end
     
-    def client
-      @client
+    def oauth
+      @oauth
     end
   end
 end
