@@ -27,11 +27,11 @@ module AWeber
       def has_one(name)
         define_method(name) do
           ivar = instance_variable_get("@#{name}")
-          return instance_var if instance_var
+          return ivar if ivar
           
           resource_link = instance_variable_get("@#{name}_link")
-          klass         = AWeber.get_class("#{name}s")
-          collection    = Collection.new(client, klass, get(resource_link))
+          klass         = AWeber.get_class(:"#{name}s")
+          collection    = klass.new(client, get(resource_link))
           instance_variable_set("@#{name}", collection)
         end
       end
@@ -81,10 +81,6 @@ module AWeber
 
     def <=>(other)
       @id <=> other.id
-    end
-    
-    def inspect
-      "#<#{self.class} id=\"#{@id}\">"
     end
 
   private

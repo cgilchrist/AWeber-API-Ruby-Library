@@ -11,7 +11,6 @@ describe AWeber::Resource do
   before :each do
     @oauth  = AWeber::OAuth.new("token", "secret")
     @aweber = AWeber::Base.new(@oauth)
-    @aweber.stub(:handle_errors)
   end
   
   it "should alias attributes" do
@@ -26,7 +25,7 @@ describe AWeber::Resource do
     fake.lists.should be_an AWeber::Collection
   end
   
-  it "should have the standard resource attribtues" do
+  it "should have the standard resource attributes" do
     fake = FakeResource.new(@aweber)
     fake.should respond_to :id
     fake.should respond_to :http_etag

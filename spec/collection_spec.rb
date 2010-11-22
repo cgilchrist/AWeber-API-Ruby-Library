@@ -5,7 +5,6 @@ describe AWeber::Collection do
   before :each do
     @oauth  = AWeber::OAuth.new("token", "secret")
     @aweber = AWeber::Base.new(@oauth)
-    @aweber.stub(:handle_errors)
     path    = File.dirname(__FILE__) + "/fixtures/lists_page_1.json"
     data    = JSON.parse File.read(File.expand_path(path))
     @lists  = AWeber::Collection.new(@aweber, AWeber::Resources::List, data)

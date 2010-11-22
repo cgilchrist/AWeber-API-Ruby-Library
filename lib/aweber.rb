@@ -20,7 +20,7 @@ module AWeber
     :web_forms            => :WebForm,
     :components           => :WebFormSplitTestComponent,
     :web_form_split_tests => :WebFormSplitTest,
-    :last_followup_sent   => :Followup
+    :last_followup_sents  => :Followup
   }
   
   class << self

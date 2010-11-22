@@ -4,7 +4,6 @@ describe AWeber::Base do
   before :each do
     @oauth  = AWeber::OAuth.new("token", "secret")
     @aweber = AWeber::Base.new(@oauth)
-    @aweber.stub(:handle_errors)
   end
   
   it "should have an account" do
