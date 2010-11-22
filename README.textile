@@ -1,24 +1,45 @@
 h1. AWeber API Gem
 
-This is the official AWeber API gem used to access the AWeber RESTful api.
+Official AWeber API gem.
 
 h2. Installation
 
 * @gem install aweber@
 
-h2. Usage
+h2. Quick Start
 
-Take a look at "examples":http://github.com/aweber/aweber-ruby/tree/master/examples/.
+First, go to "http://labs.aweber.com":http://labs.aweber.com and sign up for a free AWeber Labs account. This is how you register apps and get OAuth keys.
 
-== Note on Patches/Pull Requests
+bc. # Register an app and use it's Consumer key and secret:
+oauth = AWeber::OAuth.new("consumer_key", "consumer_secret")
+# Go to the URL the following outputs.
+oauth.request_token.authorize_url 
+# Authorize your account and copy the verification code.
+oauth.authorize_with_verifier("verification_code")
+aweber  = AWeber::Base.new(oauth)
+account = aweber.account
+account.lists # Start getting data
+
+Take a look at "examples":http://github.com/aweber/aweber-ruby/tree/master/examples/ for more examples.
+
+h2. Getting Data
+
+Every piece of data from AWeber's API stems from an Account object. From there you access associated resources in the same way you would an ActiveRecord accosication:
+
+bc. account.lists #=> #<AWeber::Collection(AWeber::Resource::List)>
+account.lists[1] #=> #<AWeber::Resource::List>
+account.lists[1].web_forms #=> #<AWeber::Collection(AWeber::Resource::WebForm)>
+
+h2. Note on Patches/Pull Requests
  
-* Fork the project.
-* Make your feature addition or bug fix in a new branch.
-* Add tests for it. Without tests, it will be rejected.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself we can ignore when I pull)
-* Send a pull request. Bonus points for topic branches.
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
+* Fork the project
+* Start a feature/bugfix branch
+* Commit and push until you are happy with your contribution
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
 
-== Copyright
+h2. Copyright
 
-Copyright (c) 2010 AWeber Communications, Inc. See LICENSE for details.
+Copyright (c) 2010 AWeber Communications, Inc. See LICENSE for more detail.

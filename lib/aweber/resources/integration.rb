@@ -1,8 +1,8 @@
 module AWeber
   module Resources
-    class VendorAccount < Resource
+    class Integration < Resource
       attr_reader :login
-      attr_reader :type
+      attr_reader :service_name
     end
   end
 end

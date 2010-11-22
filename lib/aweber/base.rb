@@ -13,7 +13,18 @@ module AWeber
 
     def get(uri)
       response = oauth.get(expand(uri))
+      handle_errors(response, uri)
       parse(response) if response
+    end
+    
+    def handle_errors(response, uri)
+      if response.is_a? Net::HTTPNotFound
+        raise NotFoundError, "Invalid resource uri.", caller
+      elsif response.body == "NotAuthorizedError"
+        raise OAuthError, "Could not authorize OAuth credentials.", caller
+      else
+        raise UnknownRequestError, "Request for #{uri} failed.", caller
+      end
     end
 
     def accounts

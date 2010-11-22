@@ -20,9 +20,9 @@ module AWeber
   # one matches the criteria. The hash will be keyed by resource ID.
   #
   #    messages.find_by_total_opens(0)
-  #    #=> { "45697" => <Message>, "12345" => <Message> }
+  #    #=> { "45697" => #<Message>, "12345" => #<Message> }
   #
-  # Collections are paginated in groups of 20. 
+  # Collections are paginated in groups of 20.
   #
   class Collection < Resource
     include Enumerable
@@ -36,9 +36,9 @@ module AWeber
     alias_method :size,   :total_size
     alias_method :length, :total_size
 
-    # @param [AWeber::Base] client instance of AWeber::Base
-    # @param [Class] klass Class to create entries of
-    # @param [Hash]  data  JSON decoded response data Hash
+    # @param [AWeber::Base] client    Instance of AWeber::Base
+    # @param [Class] klass            Class to create entries of
+    # @param [Hash]  data             JSON decoded response data Hash
     #
     def initialize(client, klass, data={})
       super client, data
@@ -55,6 +55,10 @@ module AWeber
 
     def each
       (1..@total_size).each { |n| yield get_entry(n) }
+    end
+
+    def inspect
+      "#<AW::Collection(#{@klass.to_s}) size=\"#{size}\">"
     end
 
   private

@@ -1,5 +1,3 @@
-require "bundler"
-Bundler.setup
 require "forwardable"
 require "oauth"
 require "json/pure"
@@ -8,30 +6,30 @@ module AWeber
   API_VERSION  = "1.0".freeze
   AUTH_VERSION = "1.0".freeze
   
-  # Collection name to Resources::CLASS map. Instead
-  # of relying on the assumption that collections
-  # are simply class names without the "s", we
-  # explicitely set up a mapping from name to class.
-  #
-  INFLECTIONS = { 
-    :accounts        => :Account,
-    :clicks          => :Click,
-    :links           => :Link,
-    :lists           => :List,
-    :messages        => :Message,
-    :subscribers     => :Subscriber,
-    :tracked_events  => :TrackedEvent,
-    :vendor_accounts => :VendorAccount,
-    :web_forms       => :WebForm,
+  # Used for +has_many+ and +has_one+ relationships.
+  # 
+  INFLECTIONS  = { 
+    :accounts             => :Account,
+    :clicks               => :Click,
+    :links                => :Link,
+    :lists                => :List,
+    :messages             => :Message,
+    :subscribers          => :Subscriber,
+    :tracked_events       => :TrackedEvent,
+    :integrations         => :Integration,
+    :web_forms            => :WebForm,
+    :components           => :WebFormSplitTestComponent,
     :web_form_split_tests => :WebFormSplitTest,
-    :web_form_split_test_components => :WebFormSplitTestComponent
+    :last_followup_sent   => :Followup
   }
   
   class << self
     # @param [String] Base URL of the API server
+    #
     attr_accessor :api_endpoint
     
     # @param [String] Base URL of the Auth server
+    #
     attr_accessor :auth_endpoint
     
     def api_url
@@ -54,9 +52,13 @@ module AWeber
   
   @api_endpoint  = "https://api.aweber.com"
   @auth_endpoint = "https://auth.aweber.com"
+  
+  class OAuthError < Exception; end
+  class NotFoundError < Exception; end
+  class UnknownRequestError < Exception; end
 end
 
-$:.unshift File.expand_path(File.dirname(__FILE__))
+$LOAD_PATH << File.dirname(__FILE__) unless $LOAD_PATH.include?(File.dirname(__FILE__))
 require "aweber/oauth"
 require "aweber/base"
 require "aweber/resource"

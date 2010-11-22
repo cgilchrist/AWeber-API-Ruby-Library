@@ -16,10 +16,10 @@ tmtags
 ## PROJECT::GENERAL
 coverage
 rdoc
+docs
 pkg
 Gemfile.lock
 
 ## PROJECT::SPECIFIC
-examples
 .yardoc
 .bundle

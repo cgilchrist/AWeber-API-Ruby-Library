@@ -5,15 +5,14 @@ module AWeber
       attr_reader :content_type
       attr_reader :message_interval
       attr_reader :message_number
-      attr_reader :send_windows_enabled
       attr_reader :spam_assassin_score
       attr_reader :subject
       attr_reader :total_clicked
-      attr_reader :total_complaints
       attr_reader :total_opened
       attr_reader :total_sent
-      attr_reader :total_undeliverable
-      attr_reader :total_unsubscribed
+      attr_reader :total_spam_complaints
+      attr_reader :total_undelivered
+      attr_reader :total_unsubscribes
       
       attr_reader :links_collection_link
       attr_reader :messages_collection_link
