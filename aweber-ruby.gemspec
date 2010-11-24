@@ -43,7 +43,7 @@ Gem::Specification.new do |s|
   ]
   
   s.test_files   = Dir["spec/**/*"]
-  s.extra_rdoc_files = ["LICENSE", "README.markdown"]
+  s.extra_rdoc_files = ["LICENSE", "README.textile"]
 
   s.add_dependency "oauth"
   s.add_dependency "json_pure"
