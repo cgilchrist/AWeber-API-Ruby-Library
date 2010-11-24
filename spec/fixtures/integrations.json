@@ -1,0 +1,45 @@
+{
+    "total_size": 5,
+    "start": 0,
+    "resource_type_link": "https://api.aweber.com/1.0/#integration-page-resource",
+    "entries": [{
+        "service_name": "twitter.com",
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-925fb7bb9664ca49d0e5288ff490ffbcc2c60382\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/integrations/8076",
+        "login": "gfdasgfdsgdfg",
+        "resource_type_link": "https://api.aweber.com/1.0/#integration",
+        "id": 8076
+    },
+    {
+        "service_name": "twitter",
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-731086070ed3c506637854f4f1d1936ca5605bd6\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/integrations/53404",
+        "login": "asdasd",
+        "resource_type_link": "https://api.aweber.com/1.0/#integration",
+        "id": 53404
+    },
+    {
+        "service_name": "facebook",
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-2b86e7850e6b64b69a621b513ac56b820d6ff189\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/integrations/67642",
+        "login": "asdasdasd",
+        "resource_type_link": "https://api.aweber.com/1.0/#integration",
+        "id": 67642
+    },
+    {
+        "service_name": "facebook",
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-bfbbfcb776c98a0d974cd1cc9db29d7d8bd0121f\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/integrations/67641",
+        "login": "hjkgvfgds",
+        "resource_type_link": "https://api.aweber.com/1.0/#integration",
+        "id": 67641
+    },
+    {
+        "service_name": "facebook",
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-c61ee9044fbb1157100957a5f5b7c92d1d62efad\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/integrations/19870",
+        "login": "adshkjashdlas",
+        "resource_type_link": "https://api.aweber.com/1.0/#integration",
+        "id": 19870
+    }]
+}

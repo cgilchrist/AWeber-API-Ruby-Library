@@ -1,0 +1,10 @@
+{
+    "total_unique_clicks": 1,
+    "clicks_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136339/clicks",
+    "url": "http://www.slashdot.org",
+    "total_clicks": 1,
+    "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-cccdd5ecf8154208783cc346a6d1a1277915c554\"",
+    "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136339",
+    "resource_type_link": "https://api.aweber.com/1.0/#link",
+    "id": 136339
+}

@@ -1,0 +1,16 @@
+{
+    "status": "subscribed",
+    "last_followup_sent_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/f1967848",
+    "subscription_method": "webform opt-in",
+    "http_etag": "\"90163941d8522d790a3362e7b112b1f674ee4a89-a8f828fc3824bb5714a2488d0b86fccfeb960873\"",
+    "subscribed_at": "2010-11-22 09:23:17-05:00",
+    "ad_tracking": "control panel",
+    "unsubscribed_at": null,
+    "verified_at": "2010-11-22 09:24:54",
+    "last_followup_sent_at": "2010-11-23 12:31:58.159050-05:00",
+    "subscription_url": "https://www.aweber.com/users/leads/add",
+    "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/subscribers/50723026",
+    "is_verified": true,
+    "resource_type_link": "https://api.aweber.com/1.0/#subscriber",
+    "id": 50723026
+}

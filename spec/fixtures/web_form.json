@@ -1,0 +1,14 @@
+{
+    "conversion_percentage": 0.0,
+    "unique_conversion_percentage": 0.0,
+    "name": "Test Light",
+    "total_unique_displays": 12,
+    "type": "lightbox",
+    "is_active": true,
+    "total_submissions": 0,
+    "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_forms/208918171",
+    "http_etag": "\"be17a3eae7a396181c523ef2709acf2be037f0d8-ca5feee2b7fbb6febfca8af5541541ea960aaedb\"",
+    "total_displays": 33,
+    "resource_type_link": "https://api.aweber.com/1.0/#web_form",
+    "id": 208918171
+}

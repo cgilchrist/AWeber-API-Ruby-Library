@@ -1,0 +1,9 @@
+{
+    "event_time": "2010-10-14 10:30:18-04:00",
+    "is_earliest": true,
+    "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-ef8d485378f5a2367bc355fff4e690226c6a4f1d\"",
+    "subscriber_link": null,
+    "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136339/clicks/129530",
+    "resource_type_link": "https://api.aweber.com/1.0/#click",
+    "id": 129530
+}

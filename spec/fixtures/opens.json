@@ -1,0 +1,21 @@
+{
+    "total_size": 2,
+    "start": 0,
+    "resource_type_link": "https://api.aweber.com/1.0/#open-page-resource",
+    "entries": [{
+        "event_time": "2010-07-21 10:20:41-04:00",
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-b74efa4fe831acf81185148c9d2056aede7964f7\"",
+        "subscriber_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/subscribers/50320921",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b7394854/messages/13304/opens/11720",
+        "resource_type_link": "https://api.aweber.com/1.0/#open",
+        "id": 11720
+    },
+    {
+        "event_time": "2010-07-21 10:40:07-04:00",
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-276bc5c08f32f6b3133a7694e0a43613df27909d\"",
+        "subscriber_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/subscribers/50320921",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b7394854/messages/13304/opens/11721",
+        "resource_type_link": "https://api.aweber.com/1.0/#open",
+        "id": 11721
+    }]
+}

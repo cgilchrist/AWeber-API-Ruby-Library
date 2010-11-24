@@ -1,0 +1,16 @@
+{
+    "conversion_percentage": 2.2727272727272729,
+    "unique_conversion_percentage": 7.1428571428571423,
+    "name": "Popover - display every visit",
+    "weight": 50,
+    "total_unique_displays": 14,
+    "type": "popover",
+    "is_active": true,
+    "total_submissions": 1,
+    "web_form_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_forms/1939327572",
+    "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_form_split_tests/612763163/components/612763163-1939327572",
+    "http_etag": "\"fb84f8d52440bb8311497758f95d27f4ad4a5e4e-e25bf3f1726a0e498b88f28f683691a1df2854c6\"",
+    "total_displays": 44,
+    "resource_type_link": "https://api.aweber.com/1.0/#component",
+    "id": "612763163-1939327572"
+}

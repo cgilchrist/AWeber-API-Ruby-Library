@@ -1,0 +1,41 @@
+{
+    "total_size": 4,
+    "start": 0,
+    "resource_type_link": "https://api.aweber.com/1.0/#web_form_split_test-page-resource",
+    "entries": [{
+        "name": "sdfsdfsd",
+        "http_etag": "\"c72b4e37d1bd4c1e50a84021387d96f3f48bc01f-ca5feee2b7fbb6febfca8af5541541ea960aaedb\"",
+        "is_active": false,
+        "components_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_form_split_tests/1242668124/components",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_form_split_tests/1242668124",
+        "resource_type_link": "https://api.aweber.com/1.0/#web_form_split_test",
+        "id": 1242668124
+    },
+    {
+        "name": "My splittest",
+        "http_etag": "\"c377ab517b2f42aba46e0a77d28ea2a381bf4c09-ca5feee2b7fbb6febfca8af5541541ea960aaedb\"",
+        "is_active": true,
+        "components_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_form_split_tests/1012223044/components",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_form_split_tests/1012223044",
+        "resource_type_link": "https://api.aweber.com/1.0/#web_form_split_test",
+        "id": 1012223044
+    },
+    {
+        "name": "Split Test",
+        "http_etag": "\"e3b717cfe92db22ac70b822bb45adc83a42b7447-ca5feee2b7fbb6febfca8af5541541ea960aaedb\"",
+        "is_active": true,
+        "components_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_form_split_tests/1470252472/components",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_form_split_tests/1470252472",
+        "resource_type_link": "https://api.aweber.com/1.0/#web_form_split_test",
+        "id": 1470252472
+    },
+    {
+        "name": "Popover/Inline Split",
+        "http_etag": "\"1d59f97149248c2aa12502da7e770551029dc77c-ca5feee2b7fbb6febfca8af5541541ea960aaedb\"",
+        "is_active": true,
+        "components_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_form_split_tests/612763163/components",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_form_split_tests/612763163",
+        "resource_type_link": "https://api.aweber.com/1.0/#web_form_split_test",
+        "id": 612763163
+    }]
+}

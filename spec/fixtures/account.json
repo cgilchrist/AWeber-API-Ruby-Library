@@ -1,8 +1,8 @@
 {
-    "http_etag": "\"c70dfb07dc67c9dd6a8bc01130acf68d1fbf035f-e1269986199dd882b75c00b1d589948dad184f37\"",
-    "vendor_accounts_collection_link": "http://api.apitest.lab/1.0/accounts/910/vendor_accounts",
-    "lists_collection_link": "http://api.apitest.lab/1.0/accounts/910/lists",
-    "self_link": "http://api.apitest.lab/1.0/accounts/910",
-    "resource_type_link": "http://api.apitest.lab/1.0/#account",
-    "id": 910
+    "http_etag": "\"356a192b7913b04c54574d18c28d46e6395428ab-ca5feee2b7fbb6febfca8af5541541ea960aaedb\"",
+    "lists_collection_link": "https://api.aweber.com/1.0/accounts/1/lists",
+    "self_link": "https://api.aweber.com/1.0/accounts/1",
+    "resource_type_link": "https://api.aweber.com/1.0/#account",
+    "id": 1,
+    "integrations_collection_link": "https://api.aweber.com/1.0/accounts/1/integrations"
 }

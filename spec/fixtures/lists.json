@@ -1,0 +1,38 @@
+{
+    "total_size": 3,
+    "start": 0,
+    "resource_type_link": "https://api.aweber.com/1.0/#list-page-resource",
+    "entries": [{
+        "campaigns_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1553018/campaigns",
+        "name": "default1553018",
+        "web_form_split_tests_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1553018/web_form_split_tests",
+        "subscribers_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1553018/subscribers",
+        "id": 1,
+        "http_etag": "\"4ab41e60d14ea138a4522b3d2896942b7335c13c - ca5feee2b7fbb6febfca8af5541541ea960aaedb\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/1553018",
+        "resource_type_link": "https://api.aweber.com/1.0/#list",
+        "web_forms_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1553018/web_forms"
+    },
+    {
+        "campaigns_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1550685/campaigns",
+        "name": "default1550685",
+        "web_form_split_tests_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1550685/web_form_split_tests",
+        "subscribers_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1550685/subscribers",
+        "id": 1550685,
+        "http_etag": "\"685c00e3983add5e4efb5ca3bc7294e247f6e9fe - ca5feee2b7fbb6febfca8af5541541ea960aaedb\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/1550685",
+        "resource_type_link": "https://api.aweber.com/1.0/#list",
+        "web_forms_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1550685/web_forms"
+    },
+    {
+        "campaigns_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1550679/campaigns",
+        "name": "default1550679",
+        "web_form_split_tests_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1550679/web_form_split_tests",
+        "subscribers_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1550679/subscribers",
+        "id": 1550679,
+        "http_etag": "\"0aaa38a50287df08ccb74c7f13fca8679aab688a - ca5feee2b7fbb6febfca8af5541541ea960aaedb\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/1550679",
+        "resource_type_link": "https://api.aweber.com/1.0/#list",
+        "web_forms_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1550679/web_forms"
+    }]
+}

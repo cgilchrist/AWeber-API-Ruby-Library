@@ -1,0 +1,8 @@
+{
+    "event_time": "2009-11-06 00:05:44-05:00",
+    "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-6a4a4fd5c7d79cc2f03a65e572b6a5f1af60f1b3\"",
+    "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/f4125891/messages/11839",
+    "resource_type_link": "https://api.aweber.com/1.0/#tracked_event",
+    "type": "click",
+    "id": 11839
+}

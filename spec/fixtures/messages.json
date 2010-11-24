@@ -1,0 +1,29 @@
+{
+    "total_size": 2,
+    "start": 0,
+    "resource_type_link": "https://api.aweber.com/1.0/#message-page-resource",
+    "entries": [{
+        "last_opened": null,
+        "opens_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/f4125891/messages/11839/opens",
+        "event_time": "2009-11-06 00:05:44-05:00",
+        "tracked_events_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/f4125891/messages/11839/tracked_events",
+        "total_opens": 0,
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-6a4a4fd5c7d79cc2f03a65e572b6a5f1af60f1b3\"",
+        "subscriber_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/subscribers/49223256",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/f4125891/messages/11839",
+        "resource_type_link": "https://api.aweber.com/1.0/#message",
+        "id": 11839
+    },
+    {
+        "last_opened": null,
+        "opens_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/f4125891/messages/11911/opens",
+        "event_time": "2009-11-20 00:05:39-05:00",
+        "tracked_events_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/f4125891/messages/11911/tracked_events",
+        "total_opens": 0,
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-37115b6a3e4f8ddb2079560b833e020bcfb79aac\"",
+        "subscriber_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/subscribers/49252965",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/f4125891/messages/11911",
+        "resource_type_link": "https://api.aweber.com/1.0/#message",
+        "id": 11911
+    }]
+}

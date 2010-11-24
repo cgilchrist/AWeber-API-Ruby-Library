@@ -14,6 +14,7 @@ module AWeber
     :links                => :Link,
     :lists                => :List,
     :messages             => :Message,
+    :opens                => :Open,
     :subscribers          => :Subscriber,
     :tracked_events       => :TrackedEvent,
     :integrations         => :Integration,

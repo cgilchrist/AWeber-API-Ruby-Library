@@ -1,0 +1,8 @@
+{
+    "service_name": "twitter.com",
+    "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-925fb7bb9664ca49d0e5288ff490ffbcc2c60382\"",
+    "self_link": "https://api.aweber.com/1.0/accounts/1/integrations/8076",
+    "login": "foobarman",
+    "resource_type_link": "https://api.aweber.com/1.0/#integration",
+    "id": 8076
+}

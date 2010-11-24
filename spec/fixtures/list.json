@@ -1,11 +1,11 @@
 {
-    "campaigns_collection_link": "http://api.apitest.lab/1.0/accounts/1/lists/226186/campaigns",
-    "name": "test-list777",
-    "web_form_split_tests_collection_link": "http://api.apitest.lab/1.0/accounts/1/lists/226186/web_form_split_tests",
-    "subscribers_collection_link": "http://api.apitest.lab/1.0/accounts/1/lists/226186/subscribers",
-    "id": 226186,
-    "http_etag": "\"e51bc0351083caca2a811a97937225605e80113c-e1269986199dd882b75c00b1d589948dad184f37\"",
-    "self_link": "http://api.apitest.lab/1.0/accounts/1/lists/226186",
-    "resource_type_link": "http://api.apitest.lab/1.0/#list",
-    "web_forms_collection_link": "http://api.apitest.lab/1.0/accounts/1/lists/226186/web_forms"
+    "campaigns_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1550679/campaigns",
+    "name": "default1550679",
+    "web_form_split_tests_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1550679/web_form_split_tests",
+    "subscribers_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1550679/subscribers",
+    "id": 1550679,
+    "http_etag": "\"0aaa38a50287df08ccb74c7f13fca8679aab688a-ca5feee2b7fbb6febfca8af5541541ea960aaedb\"",
+    "self_link": "https://api.aweber.com/1.0/accounts/1/lists/1550679",
+    "resource_type_link": "https://api.aweber.com/1.0/#list",
+    "web_forms_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/1550679/web_forms"
 }

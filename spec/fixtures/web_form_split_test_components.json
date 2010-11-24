@@ -1,0 +1,37 @@
+{
+    "total_size": 2,
+    "start": 0,
+    "resource_type_link": "https://api.aweber.com/1.0/#component-page-resource",
+    "entries": [{
+        "conversion_percentage": 3.9215686274509802,
+        "unique_conversion_percentage": 7.4074074074074066,
+        "name": "In-Line Test",
+        "weight": 50,
+        "total_unique_displays": 27,
+        "type": "inline",
+        "is_active": true,
+        "total_submissions": 2,
+        "web_form_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_forms/513600765",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_form_split_tests/612763163/components/612763163-513600765",
+        "http_etag": "\"6334a2e8cea7042acb6de99272e7105851d43d03-0d45d2b05a0e486d5e2d7ed6f071487658adb336\"",
+        "total_displays": 51,
+        "resource_type_link": "https://api.aweber.com/1.0/#component",
+        "id": "612763163-513600765"
+    },
+    {
+        "conversion_percentage": 2.2727272727272729,
+        "unique_conversion_percentage": 7.1428571428571423,
+        "name": "Popover - display every visit",
+        "weight": 50,
+        "total_unique_displays": 14,
+        "type": "popover",
+        "is_active": true,
+        "total_submissions": 1,
+        "web_form_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_forms/1939327572",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/web_form_split_tests/612763163/components/612763163-1939327572",
+        "http_etag": "\"fb84f8d52440bb8311497758f95d27f4ad4a5e4e-e25bf3f1726a0e498b88f28f683691a1df2854c6\"",
+        "total_displays": 44,
+        "resource_type_link": "https://api.aweber.com/1.0/#component",
+        "id": "612763163-1939327572"
+    }]
+}

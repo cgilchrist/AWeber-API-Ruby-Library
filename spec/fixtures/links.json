@@ -1,0 +1,75 @@
+{
+    "total_size": 7,
+    "start": 0,
+    "resource_type_link": "https://api.aweber.com/1.0/#link-page-resource",
+    "entries": [{
+        "total_unique_clicks": 0,
+        "clicks_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136340/clicks",
+        "url": "http://www.facebook.com",
+        "total_clicks": 0,
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-4da936abdffce1783e329689bbbe1cbe93c228ed\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136340",
+        "resource_type_link": "https://api.aweber.com/1.0/#link",
+        "id": 136340
+    },
+    {
+        "total_unique_clicks": 1,
+        "clicks_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136339/clicks",
+        "url": "http://www.slashdot.org",
+        "total_clicks": 1,
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-cccdd5ecf8154208783cc346a6d1a1277915c554\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136339",
+        "resource_type_link": "https://api.aweber.com/1.0/#link",
+        "id": 136339
+    },
+    {
+        "total_unique_clicks": 1,
+        "clicks_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136338/clicks",
+        "url": "http://www.google.com",
+        "total_clicks": 1,
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-ebef59d35b76065b619cfb172b95e2f00f2ebc64\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136338",
+        "resource_type_link": "https://api.aweber.com/1.0/#link",
+        "id": 136338
+    },
+    {
+        "total_unique_clicks": 0,
+        "clicks_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136337/clicks",
+        "url": "http://www.digg.com",
+        "total_clicks": 0,
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-abbd9d1589c6f18c3f955757036576a47f2bf51c\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136337",
+        "resource_type_link": "https://api.aweber.com/1.0/#link",
+        "id": 136337
+    },
+    {
+        "total_unique_clicks": 0,
+        "clicks_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136336/clicks",
+        "url": "http://www.redhat.com",
+        "total_clicks": 0,
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-3a81205b8f21776f29b34bbeea2e99a5ef5ca6a3\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136336",
+        "resource_type_link": "https://api.aweber.com/1.0/#link",
+        "id": 136336
+    },
+    {
+        "total_unique_clicks": 1,
+        "clicks_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136335/clicks",
+        "url": "http://www.google.com",
+        "total_clicks": 1,
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-f355087308415e5c965c6eb99747ec666498bd96\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136335",
+        "resource_type_link": "https://api.aweber.com/1.0/#link",
+        "id": 136335
+    },
+    {
+        "total_unique_clicks": 0,
+        "clicks_collection_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136334/clicks",
+        "url": "http://www.yahoo.com",
+        "total_clicks": 0,
+        "http_etag": "\"da39a3ee5e6b4b0d3255bfef95601890afd80709-012b4796ddb206859b20d20e0c7f326b28a3b35e\"",
+        "self_link": "https://api.aweber.com/1.0/accounts/1/lists/406860/campaigns/b8051119/links/136334",
+        "resource_type_link": "https://api.aweber.com/1.0/#link",
+        "id": 136334
+    }]
+}
