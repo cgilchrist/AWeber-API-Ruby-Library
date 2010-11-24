@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
-  s.name         = "aweber-ruby"
+  s.name         = "aweber"
   s.version      = "1.0.0"
   s.platform     = Gem::Platform::RUBY
   s.summary      = "Ruby interface to AWeber's API"
@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   
   s.require_path = "lib"
   s.files        = [
-    "aweber-ruby.gemspec",
+    "aweber.gemspec",
     "examples/with_access_token.rb",
     "examples/your_account.rb",
     "Gemfile",
