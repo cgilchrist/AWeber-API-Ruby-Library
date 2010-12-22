@@ -1,6 +1,6 @@
 require 'rspec/core/rake_task'
 RSpec::Core::RakeTask.new(:spec) do |s|
-  s.rspec_opts = ["--color"]
+  s.rspec_opts = ["--fail-fast", "--color"]
 end
 
 require 'yard'
