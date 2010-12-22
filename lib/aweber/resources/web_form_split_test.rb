@@ -1,9 +1,9 @@
 module AWeber
   module Resources
     class WebFormSplitTest < Resource
-      attr_reader :components_collection_link
-      attr_reader :is_active
-      attr_reader :name
+      api_attr :components_collection_link
+      api_attr :is_active
+      api_attr :name
       
       has_many :components
     end

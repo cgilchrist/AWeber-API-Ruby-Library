@@ -1,13 +1,13 @@
 module AWeber
   module Resources
     class Message < Resource
-      attr_reader :event_time
-      attr_reader :last_opened
-      attr_reader :total_opens
-      
-      attr_reader :subscriber_link
-      attr_reader :tracked_events_collection_link
-      attr_reader :opens_collection_link
+      api_attr :event_time
+      api_attr :last_opened
+      api_attr :total_opens
+
+      api_attr :subscriber_link
+      api_attr :tracked_events_collection_link
+      api_attr :opens_collection_link
       
       has_one :subscriber
       

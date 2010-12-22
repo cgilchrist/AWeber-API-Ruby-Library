@@ -2,6 +2,7 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 class FakeResource < AWeber::Resource
   attr_accessor :foo
+  api_attr :name, :writable => true
   alias_attribute :bar, :foo
   has_many :lists
 end
@@ -56,6 +57,24 @@ describe AWeber::Resource do
     fake3 = FakeResource.new @aweber, :id => 2
     fake1.should == fake2
     fake1.should_not == fake3
+  end
+  
+  it "should be deleted" do
+    fake = FakeResource.new(@aweber, JSON.parse(fixture("account.json")))
+    @oauth.should_receive(:delete).with(fake.link)
+    fake.delete
+  end
+  
+  it "should declare writable attributes" do
+    resource = FakeResource.new(@aweber)
+    resource.writable_attrs.include?(:name).should be_true
+  end
+  
+  it "should send a JSON respresentation of the object on save" do
+    resource = FakeResource.new(@aweber)
+    @oauth.should_receive(:put).with(resource.link, "{\"name\":\"Bob\"}")
+    resource.name = "Bob"
+    resource.save
   end
   
 end

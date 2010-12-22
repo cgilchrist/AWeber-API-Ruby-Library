@@ -1,9 +1,9 @@
 module AWeber
   module Resources
     class Click < Resource
-      attr_reader :event_time
-      attr_reader :is_earliest
-      attr_reader :subscriber_link
+      api_attr :event_time
+      api_attr :is_earliest
+      api_attr :subscriber_link
       
       has_one :subscriber
       

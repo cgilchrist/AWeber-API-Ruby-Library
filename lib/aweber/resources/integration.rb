@@ -1,8 +1,8 @@
 module AWeber
   module Resources
     class Integration < Resource
-      attr_reader :login
-      attr_reader :service_name
+      api_attr :login
+      api_attr :service_name
     end
   end
 end

@@ -1,8 +1,8 @@
 module AWeber
   module Resources
     class Account < Resource
-      attr_reader :lists_collection_link
-      attr_reader :integrations_collection_link
+      api_attr :lists_collection_link
+      api_attr :integrations_collection_link
     
       has_many :lists
       has_many :integrations

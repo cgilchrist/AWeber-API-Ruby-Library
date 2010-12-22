@@ -14,14 +14,36 @@ module AWeber
     extend Forwardable
     include Comparable
 
-    def_delegators :client, :get
-
     class << self
+      attr_accessor :writable_attrs
       # Works the same as +alias_method+, but for attributes created via
       # +attr*+ methods.
       #
       def alias_attribute(alias_, attribute)
         alias_method alias_, attribute
+      end
+      
+      # Defines an attribute that it either read only or writable.
+      # 
+      # == Example:
+      # 
+      #   # Read-only
+      #   api_attr :name
+      # 
+      #   # Writable
+      #   api_attr :name, :writable => true
+      # 
+      # If an attribute is writable it will be sent with the request when
+      # +save+ is called.
+      # 
+      def api_attr(attr_, opts={})
+        if opts[:writable]
+          attr_accessor attr_
+          @writable_attrs ||= []
+          @writable_attrs << attr_
+        else
+          attr_reader attr_
+        end
       end
       
       def has_one(name)
@@ -31,7 +53,7 @@ module AWeber
           
           resource_link = instance_variable_get("@#{name}_link")
           klass         = AWeber.get_class(:"#{name}s")
-          collection    = klass.new(client, get(resource_link))
+          collection    = klass.new(client, client.get(resource_link))
           instance_variable_set("@#{name}", collection)
         end
       end
@@ -57,16 +79,16 @@ module AWeber
 
           resource_link = instance_variable_get("@#{name}_collection_link")
           klass         = AWeber.get_class(name)
-          collection    = Collection.new(client, klass, get(resource_link))
+          collection    = Collection.new(client, klass, client.get(resource_link))
           instance_variable_set("@#{name}", collection)
         end
       end
     end
 
-    attr_reader :id
-    attr_reader :http_etag
-    attr_reader :self_link
-    attr_reader :resource_type_link
+    api_attr :id
+    api_attr :http_etag
+    api_attr :self_link
+    api_attr :resource_type_link
 
     alias_attribute :etag, :http_etag
     alias_attribute :link, :self_link
@@ -77,6 +99,22 @@ module AWeber
       data.each do |key, value|
         instance_variable_set("@#{key}", value) if respond_to? key
       end
+    end
+    
+    def delete
+      client.delete(@self_link)
+    end
+    
+    def save
+      body = writable_attrs.inject({}) do |body, attr_|
+        body[attr_] = send(attr_)
+        body
+      end
+      client.put(self_link, body)
+    end
+    
+    def writable_attrs
+      self.class.writable_attrs ||= {}
     end
 
     def <=>(other)

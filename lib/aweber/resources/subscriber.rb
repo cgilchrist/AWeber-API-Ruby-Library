@@ -1,21 +1,23 @@
 module AWeber
   module Resources
     class Subscriber < Resource
-      attr_reader :ad_tracking
-      attr_reader :email
-      attr_reader :ip_address
-      attr_reader :is_verified
-      attr_reader :last_followup_sent_at
-      attr_reader :misc_notes
-      attr_reader :name
-      attr_reader :status
-      attr_reader :subscribed_at
-      attr_reader :subscription_method
-      attr_reader :subscription_url
-      attr_reader :unsubscribed_at
-      attr_reader :verified_at
+      api_attr :name,          :writable => true
+      api_attr :misc_notes,    :writable => true
+      api_attr :email,         :writable => true
+      api_attr :status,        :writable => true
+      api_attr :custom_fields, :writable => true
+      api_attr :ad_tracking,   :writable => true
+      api_attr :last_followup_message_number_sent, :writable => true
       
-      attr_reader :last_followup_sent_link
+      api_attr :ip_address
+      api_attr :is_verified
+      api_attr :last_followup_sent_at
+      api_attr :subscribed_at
+      api_attr :subscription_method
+      api_attr :subscription_url
+      api_attr :unsubscribed_at
+      api_attr :verified_at
+      api_attr :last_followup_sent_link
       
       has_one :last_followup_sent
       

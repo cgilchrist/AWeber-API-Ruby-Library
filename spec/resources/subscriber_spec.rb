@@ -22,4 +22,12 @@ describe AWeber::Resources::Subscriber do
   it { should respond_to :subscription_url }
   it { should respond_to :unsubscribed_at }
   it { should respond_to :verified_at }
+  
+  its(:writable_attrs) { should include :name }
+  its(:writable_attrs) { should include :misc_notes }
+  its(:writable_attrs) { should include :email }
+  its(:writable_attrs) { should include :status }
+  its(:writable_attrs) { should include :custom_fields }
+  its(:writable_attrs) { should include :ad_tracking }
+  its(:writable_attrs) { should include :last_followup_message_number_sent }
 end

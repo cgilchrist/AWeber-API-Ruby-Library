@@ -1,23 +1,23 @@
 module AWeber
   module Resources
     class Broadcast < Resource
-      attr_reader :click_tracking_enabled
-      attr_reader :content_type
-      attr_reader :is_archived
-      attr_reader :scheduled_at
-      attr_reader :sent_at
-      attr_reader :spam_assassin_score
-      attr_reader :subject
-      attr_reader :total_clicks
-      attr_reader :total_opens
-      attr_reader :total_sent
-      attr_reader :total_spam_complaints
-      attr_reader :total_undelivered
-      attr_reader :total_unsubscribes
-      attr_reader :twitter_account_link
+      api_attr :click_tracking_enabled
+      api_attr :content_type
+      api_attr :is_archived
+      api_attr :scheduled_at
+      api_attr :sent_at
+      api_attr :spam_assassin_score
+      api_attr :subject
+      api_attr :total_clicks
+      api_attr :total_opens
+      api_attr :total_sent
+      api_attr :total_spam_complaints
+      api_attr :total_undelivered
+      api_attr :total_unsubscribes
+      api_attr :twitter_account_link
 
-      attr_reader :links_collection_link
-      attr_reader :messages_collection_link
+      api_attr :links_collection_link
+      api_attr :messages_collection_link
 
       has_many :links
       has_many :messages
