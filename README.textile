@@ -32,6 +32,24 @@ Every piece of data from AWeber's API stems from an Account object. From there y
 bc. account.lists #=> #<AWeber::Collection(AWeber::Resource::List)>
 account.lists[1]  #=> #<AWeber::Resource::List>
 
+h2. Modifying Subscribers
+
+Currently, only certain attributes of Subscribers are writable:
+
+* name
+* misc_notes
+* email (yes email)
+* status
+* last_followup_message_number_sent
+* custom_fields (Hash of key/value pairs)
+* ad_tracking
+
+h3. Example
+
+bc. subscriber = account.lists[654321].subscribers[123456]
+subscriber.name = "New Name"
+subscriber.save
+
 h2. Note on Patches/Pull Requests
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
