@@ -20,7 +20,7 @@ module AWeber
     end
     
     def put(uri, body={})
-      oauth.put(uri, body.to_json)
+      oauth.put(uri, body.to_json, {"Content-Type" => "application/json"})
     end
 
   private
@@ -40,9 +40,9 @@ module AWeber
     def expand(uri)
       parsed = URI.parse(uri)
       url = []
-      url << AWeber.api_endpoint unless parsed.host
+      url << AWeber.api_endpoint
       url << API_VERSION unless parsed.path.include? API_VERSION
-      url << uri
+      url << parsed.path
       File.join(*url)
     end
 
