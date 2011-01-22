@@ -60,7 +60,7 @@ describe AWeber::Resource do
   end
   
   it "should be deleted" do
-    fake = FakeResource.new(@aweber, JSON.parse(fixture("account.json")))
+    fake = FakeResource.new(@aweber, ActiveSupport::JSON.decode(fixture("account.json")))
     @oauth.should_receive(:delete).with(fake.link)
     fake.delete
   end

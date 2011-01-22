@@ -5,7 +5,7 @@ describe AWeber::Collection do
   before :each do
     @oauth  = AWeber::OAuth.new("token", "secret")
     @aweber = AWeber::Base.new(@oauth)
-    data    = JSON.parse(fixture("lists.json"))
+    data    = ActiveSupport::JSON.decode(fixture("lists.json"))
     @lists  = AWeber::Collection.new(@aweber, AWeber::Resources::List, data)
   end
   

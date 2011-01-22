@@ -47,7 +47,7 @@ module AWeber
     end
 
     def parse(response)
-      JSON.parse(response.body)
+      ActiveSupport::JSON.decode(response.body)
     end
 
     def oauth
